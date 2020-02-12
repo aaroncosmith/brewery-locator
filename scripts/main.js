@@ -2,9 +2,6 @@
 
 const ipApiURL = 'https://ipvigilante.com/64.124.76.250'
 
-
-
-
 function getBreweryByCity(city){
     const breweryApiURL = `https://api.openbrewerydb.org/breweries?by_city=${city}`;
     let breweryNames = []
@@ -21,3 +18,8 @@ function getBreweryByCity(city){
 //function getCityByIP()
 
 console.log(getBreweryByCity('atlanta'));
+
+const getUserInputButton = document.querySelector("#brewbutton")
+getUserInputButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    console.log('clicked');})
