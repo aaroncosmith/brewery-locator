@@ -11,3 +11,11 @@ body {
     display: flex;
     justify-content: center;
 }
+
+ol {
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+}
