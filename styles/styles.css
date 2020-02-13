@@ -1,15 +1,30 @@
-body {
-    background-color: yellow;
-}
-
 .logo {
-    height: 60%;
-    width: 60%;
+    height: 60px;
+    width: 200px;
 }
 
 .logo-wrapper {
     display: flex;
+
+}
+
+.menu {
+    padding-top: 5px;
+}
+
+header {
+    padding-left: 10px;
+}
+@media (max-width:550px ) {
+    /* PUT SOME STUFF HERE */
+}
+/* .logo-wrapper {
+    display: flex;
     justify-content: center;
+} */
+
+body {
+    background-color: yellow;
 }
 
 ol {
