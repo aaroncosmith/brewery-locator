@@ -5,17 +5,40 @@
 
 .logo-wrapper {
     display: flex;
-
+    padding-top: 5px;
 }
 
 .menu {
     padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: row;
 }
+
+.menu-button {
+    padding-right: 3px;
+}
+.a .menu-button {
+    color:black;
+}
+.slogan {
+    padding-top: 20px;
+    padding-left: 5px;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
 
 header {
     padding-left: 10px;
+    background-color: #c59E00;
+    
 }
 @media (max-width:550px ) {
+    .slogan {
+        padding-top: 10px;
+    }
     /* PUT SOME STUFF HERE */
 }
 /* .logo-wrapper {
@@ -23,8 +46,12 @@ header {
     justify-content: center;
 } */
 
+.main-content {
+    background-color: #FFE063 ;
+}
+
 body {
-    background-color: yellow;
+    background-color: #FFD839;
 }
 
 ol {
