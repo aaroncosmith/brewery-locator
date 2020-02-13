@@ -1,3 +1,21 @@
-html {
+body {
     background-color: yellow;
+}
+
+.logo {
+    height: 60%;
+    width: 60%;
+}
+
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+ol {
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
 }
