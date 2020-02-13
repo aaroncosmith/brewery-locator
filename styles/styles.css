@@ -43,15 +43,15 @@ html {
 
 header {
     padding-left: 10px;
+    padding-bottom: 12px;
 }
-
-
-
-
 
 .main-content {
     background-color: #FFE063 ;
-    border-radius: 5px;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
     
 }
 
@@ -73,13 +73,12 @@ ol {
     }
 }
 
-/* @media (min-width:1000px) {
-    body {
-        background-color: teal;
-        margin: auto;
+@media (min-width:1000px) {
+
+    .whole-wrapper {
+        margin-left: 150px;
+        margin-right: 150px;
+        
     }
 
-    .main-content {
-        width: 1000px;
-    }
-} */
+}
