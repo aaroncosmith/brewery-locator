@@ -12,8 +12,8 @@
 //     document.getElementById("firstcomp").innerHTML = "YUP";
 // }
 
-let a = document.getElementById('wholelist'); 
-let arr = ["brew1", "brew2", "brew3"];
+// let a = document.getElementById('wholelist'); 
+// let arr = ["brew1", "brew2", "brew3"];
 
 document.getElementById('brewbutton').onclick = display; 
 console.log(a.value);
@@ -21,8 +21,12 @@ console.log(a.value);
 
 
 function display(){ 
+
+    injectHTML(brewArray);
+    };
     // console.log(arr); 
 
-arr.forEach(indivbrew => {
-    console.log(indivbrew); }
-)}
+// brewArray.forEach(indivbrew => {
+    
+//     console.log(indivbrew); }
+// )}

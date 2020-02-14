@@ -1,21 +1,21 @@
-const brewArray = returnBrew();
-console.log(brewArray);
-// const brewArray = [
-//     {
-//         name: "The Brewery",
-//         brewery_type: "SUPER MEGA DEATH",
-//         address: "4440 August Lane, Kansas City, KS, 66106",
-//         website: "https://www.google.com",
-//     },
-//     {
-//         name: "1The Brewery",
-//         brewery_type: "1SUPER MEGA DEATH",
-//         address: "14440 August Lane, Kansas City, KS, 66106",
-//         website: "www.1yourmom.com",
-//     },
+// const brewArray = returnBrew();
+// console.log(brewArray);
+const brewArray = [
+    {
+        name: "The Brewery",
+        brewery_type: "SUPER MEGA DEATH",
+        address: "4440 August Lane, Kansas City, KS, 66106",
+        website: "https://www.google.com",
+    },
+    {
+        name: "1The Brewery",
+        brewery_type: "1SUPER MEGA DEATH",
+        address: "14440 August Lane, Kansas City, KS, 66106",
+        website: "www.1yourmom.com",
+    },
 
 
-// ];
+];
 
 function injectHTML(results) {
     const orderedList = document.getElementById('firstorder');
