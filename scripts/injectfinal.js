@@ -1,3 +1,4 @@
+// street; city; state; postal_code; website_url
 function injectHTML(results) {
     const orderedList = document.getElementById('firstorder');
     console.log(results);
@@ -22,3 +23,5 @@ function injectHTML(results) {
         `
     }) 
 };
+
+
