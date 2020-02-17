@@ -1,21 +1,3 @@
-const brewArray = returnBrew();
-console.log(brewArray);
-// const brewArray = [
-//     {
-//         name: "The Brewery",
-//         brewery_type: "SUPER MEGA DEATH",
-//         address: "4440 August Lane, Kansas City, KS, 66106",
-//         website: "https://www.google.com",
-//     },
-//     {
-//         name: "1The Brewery",
-//         brewery_type: "1SUPER MEGA DEATH",
-//         address: "14440 August Lane, Kansas City, KS, 66106",
-//         website: "www.1yourmom.com",
-//     },
-
-
-// ];
 
 function injectHTML(results) {
     const orderedList = document.getElementById('firstorder');
@@ -32,7 +14,7 @@ function injectHTML(results) {
                 ${eaResult.brewery_type}
             </div>
             <div class="address-link">
-                <a href="https://www.google.com/maps/dir/Current+Location/${eaResult.address}">${eaResult.address}</a>
+                <a href="https://www.google.com/maps/dir/Current+Location/${eaResult.street}">${eaResult.street}</a>
             </div>
             <div class="website">
                 <a href="${eaResult.website}">${eaResult.website}</a>
@@ -42,5 +24,5 @@ function injectHTML(results) {
     }) 
 };
 
-injectHTML(brewArray);
+
 

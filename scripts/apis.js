@@ -12,7 +12,7 @@ function breweryNamesToArray(breweries) {
     breweries.map(brewery => {
         if (brewery['brewery_type'] === 'micro' || brewery['brewery_type'] === 'brewpub' || brewery['brewery_type'] === 'regional'){
             if (brewery['latitude'] !== null && brewery['longitude'] !== null){
-                breweryNames.push(brewery['name']);
+                breweryNames.push(brewery);
             }
         }
     });
@@ -61,6 +61,7 @@ function sortBreweries(distanceBetween, sortedDistance){
     sortedDistance.forEach(distance => {
         sortedBreweries.push(breweryNames[distanceBetween.indexOf(distance)]);
     })
+    injectHTML(sortedBreweries);
 }
 
 function calculateDistance(breweriesLat, breweriesLong, userLat, userLong){
@@ -85,9 +86,9 @@ function getUserLoation(){
         console.log('fail');
     }
     navigator.geolocation.getCurrentPosition(success, fail);
+    getCityByIP();
 }
 
-getCityByIP();
 getUserLoation();
 console.log(breweryNames);
 console.log(sortedBreweries);
