@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // const brewArray = returnBrew();
 // console.log(brewArray);
 const brewArray = [
@@ -16,6 +17,8 @@ const brewArray = [
 
 
 ];
+=======
+>>>>>>> 78a4e2ec4972b12b108f9ec0837d944d8ba05ca9
 
 function injectHTML(results) {
     const orderedList = document.getElementById('firstorder');
@@ -32,7 +35,7 @@ function injectHTML(results) {
                 ${eaResult.brewery_type}
             </div>
             <div class="address-link">
-                <a href="https://www.google.com/maps/dir/Current+Location/${eaResult.address}">${eaResult.address}</a>
+                <a href="https://www.google.com/maps/dir/Current+Location/${eaResult.street}">${eaResult.street}</a>
             </div>
             <div class="website">
                 <a href="${eaResult.website}">${eaResult.website}</a>
@@ -42,5 +45,5 @@ function injectHTML(results) {
     }) 
 };
 
-injectHTML(brewArray);
+
 
