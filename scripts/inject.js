@@ -1,22 +1,4 @@
-const brewArray = returnBrew();
-console.log(brewArray);
-// const brewArray = [
-//     {
-//         name: "The Brewery",
-//         brewery_type: "SUPER MEGA DEATH",
-//         address: "4440 August Lane, Kansas City, KS, 66106",
-//         website: "https://www.google.com",
-//     },
-//     {
-//         name: "1The Brewery",
-//         brewery_type: "1SUPER MEGA DEATH",
-//         address: "14440 August Lane, Kansas City, KS, 66106",
-//         website: "www.1yourmom.com",
-//     },
-
-
-// ];
-
+// street; city; state; postal_code; website_url
 function injectHTML(results) {
     const orderedList = document.getElementById('firstorder');
     console.log(results);
@@ -29,18 +11,17 @@ function injectHTML(results) {
                 ${eaResult.name}
             </div>
             <div class="brew-type">
-                ${eaResult.brewery_type}
+                Brewery Type: ${eaResult.brewery_type}
             </div>
             <div class="address-link">
-                <a href="https://www.google.com/maps/dir/Current+Location/${eaResult.address}">${eaResult.address}</a>
+                <a href="https://www.google.com/maps/dir/Current+Location/${eaResult.street},${eaResult.city},${eaResult.state},${eaResult.postal_code} $">${eaResult.street}, ${eaResult.city}, ${eaResult.state}, ${eaResult.postal_code}</a>
             </div>
             <div class="website">
-                <a href="${eaResult.website}">${eaResult.website}</a>
+                <a href="${eaResult.website_url}">${eaResult.website_url}</a>
             </div>
         </li>
         `
     }) 
 };
 
-injectHTML(brewArray);
 
