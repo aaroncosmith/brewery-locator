@@ -1,5 +1,16 @@
+
 // try and take items from an array and inject them on a 
 // clickable link that sits on the actual address
+
+async function getResultsByCity(city) {
+    console.log(city)
+    const response = await fetch(`https://api.openbrewerydb.org/breweries?by_city=${city}`)
+    const data = await response.json()
+    return data;
+}
+
+
+
 const brewArray = [
     {
         title: "The Brewery",
@@ -17,18 +28,19 @@ const brewArray = [
 
 emptySearchArray = [];
 
-function mapsAdressSearch(results) {
+function injectHTML(results) {
     const orderedList = document.getElementById('firstorder');
-    console.log("FUCK YEAH");
+    console.log(results);
     innerHTML = "";
+
     results.forEach(function(eaResult) {
         orderedList.innerHTML = orderedList.innerHTML + `
         <li class="brew-list">
             <div class="brew-title">
-                ${eaResult.title}
+                ${eaResult.name}
             </div>
             <div class="brew-type">
-                ${eaResult.brew}
+                ${eaResult.brewery_type}
             </div>
             <div class="address-link">
                 <a href="https://www.google.com/maps/dir/Current+Location/${eaResult.address}">${eaResult.address}</a>
@@ -40,9 +52,17 @@ function mapsAdressSearch(results) {
         `
 
     }) 
-
-    
-
 };
+// async function getCityByIP(){
+//     const response = await fetch("https://cors-anywhere.herokuapp.com/http://ip-api.io/api/json");
+//     console.log(response)
+//     const data = await response.json();
+//     console.log(data)
+//     return data.city;
+// };
 
-mapsAdressSearch(brewArray);
+// getCityByIP().then((data) => {
+//     getResultsByCity(data).then((data) => {injectHTML(data)});
+// })
+
+injectHTML(brewArray);

@@ -1,5 +1,8 @@
-const brewArray = returnBrew();
-console.log(brewArray);
+// const brewArray = makeBrewObject();
+// console.log(brewArray);
+
+// const brewArray = returnBrew();
+// console.log(brewArray);
 // const brewArray = [
 //     {
 //         name: "The Brewery",
@@ -23,6 +26,7 @@ function injectHTML(results) {
     innerHTML = "";
 
     results.forEach(function(eaResult) {
+        
         orderedList.innerHTML = orderedList.innerHTML + `
         <li class="brew-list">
             <div class="brew-title">
@@ -42,5 +46,5 @@ function injectHTML(results) {
     }) 
 };
 
-injectHTML(brewArray);
+// injectHTML().then((brewObject) => {injectHTML(brewObject)});
 
