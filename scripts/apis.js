@@ -66,4 +66,4 @@ function getUserLocation () {
     })
 }
 
-getUserLocation()
+// getUserLocation()
