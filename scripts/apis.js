@@ -72,6 +72,7 @@ function getBreweryByCity(city){
 function getCityByLocation(lat, long){
     const geoParseApi = `https://geocode.xyz/${lat},${long}?json=1`
     get(geoParseApi).then(response => {
+        console.log('city', response.city);
         getBreweryByCity(response.city);
     })
 }
