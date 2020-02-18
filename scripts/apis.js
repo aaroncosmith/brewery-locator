@@ -61,7 +61,7 @@ function sortBreweries(distanceBetween, sortedDistance){
     sortedDistance.forEach(distance => {
         sortedBreweries.push(breweryNames[distanceBetween.indexOf(distance)]);
     })
-    injectHTML(sortedBreweries);
+    injectHTML(sortedBreweries.splice(0,6));
 }
 
 function calculateDistance(breweriesLat, breweriesLong, userLat, userLong){
@@ -76,22 +76,25 @@ function calculateDistance(breweriesLat, breweriesLong, userLat, userLong){
     sortBreweries(distanceBetween, sortedDistance);
 }
 
-function getUserLoation(){
-
-    function success(pos){
+function getUserLocation () {
+    let userPosition = function () {
+        return new Promise(function (resolve, reject){
+            navigator.geolocation.getCurrentPosition(resolve, reject);       
+        });
+    }
+    userPosition()
+    .then((pos) => {
+        console.log('It worked!')
         calculateDistance(breweriesLat, breweriesLong, pos.coords.latitude, pos.coords.longitude);
-    }
-
-    function fail(){
-        console.log('fail');
-    }
-    navigator.geolocation.getCurrentPosition(success, fail);
-    getCityByIP();
+    })
+    .catch((err) => {
+        console.error(err.message);
+    })
 }
 
-getUserLoation();
-console.log(breweryNames);
-console.log(sortedBreweries);
+getCityByIP();
+getUserLocation()
+
 
 
 
