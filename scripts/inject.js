@@ -12,7 +12,7 @@ function injectHTML(results) {
                 ${eaResult.name}
             </div>
             <div class="brew-type">
-                Brewery Type: ${eaResult.brewery_type}
+                Brewery Type: ${eaResult.brewery_type.slice(0,1).toUpperCase() + eaResult.brewery_type.slice(1)}
             </div>
             <div class="address-link">
                 <a href="https://www.google.com/maps/dir/Current+Location/${eaResult.street},${eaResult.city},${eaResult.state},${eaResult.postal_code} $">${eaResult.street}, ${eaResult.city}, ${eaResult.state}, ${eaResult.postal_code}</a>
