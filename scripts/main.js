@@ -4,6 +4,7 @@ const brewbutton = document.getElementById("brewbutton");
 
 brewbutton.addEventListener("click", function(e) {
     const brewLocation = document.getElementById("brewField").value;
-    console.log(brewLocation);
-    getBreweryByCity(brewLocation); 
+    const brewState = document.getElementById("state-select").value;
+    console.log(brewLocation, brewState);
+    getBreweryByCity(brewLocation, brewState); 
 });
