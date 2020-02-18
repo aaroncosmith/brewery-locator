@@ -6,7 +6,7 @@ function injectHTML(results) {
 
     results.forEach(function(eaResult) {
         orderedList.innerHTML = orderedList.innerHTML + `
-        <li class="brew-list">
+        <li class="list-group-item">
             <div class="brew-title">
                 ${eaResult.name}
             </div>
