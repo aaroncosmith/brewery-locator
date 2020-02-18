@@ -1,8 +1,7 @@
 
 function injectHTML(results) {
     const orderedList = document.getElementById('firstorder');
-    console.log(results);
-    innerHTML = "";
+    orderedList.innerHTML = "";
 
     results.forEach(function(eaResult) {
         orderedList.innerHTML = orderedList.innerHTML + `
