@@ -35,7 +35,7 @@ function breweriesToArray(breweries) {
 }
 
 function getBreweryByCity(city, state){
-    const breweryApiURL = `https://api.openbrewerydb.org/breweries?by_city=${city}&${state}`;
+    const breweryApiURL = `https://api.openbrewerydb.org/breweries?by_city=${city}&by_state=${state}`;
     get(breweryApiURL).then(response => {
         breweriesToArray(response);
     });
