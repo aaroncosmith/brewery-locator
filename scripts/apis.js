@@ -35,8 +35,7 @@ function breweriesToArray(breweries) {
 }
 
 function getBreweryByCity(city, state){
-    console.log('input', city, state);
-    const breweryApiURL = `https://api.openbrewerydb.org/breweries?by_city=${city}&by_state=${state}`;
+    const breweryApiURL = `https://api.openbrewerydb.org/breweries?by_city=${city}&${state}`;
     get(breweryApiURL).then(response => {
         breweriesToArray(response);
     });
@@ -60,11 +59,11 @@ function getUserLocation () {
     .then((pos) => {
         console.log('It worked!', pos.coords)
         userLocation = [pos.coords.latitude, pos.coords.longitude]
-        // getCityByLocation(pos.coords.latitude, pos.coords.longitude);
+        getCityByLocation(pos.coords.latitude, pos.coords.longitude);
     })
     .catch((err) => {
         console.error(err.message);
     })
 }
 
-// getUserLocation()
+getUserLocation()
