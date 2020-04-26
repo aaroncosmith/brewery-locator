@@ -44,8 +44,8 @@ function getBreweryByCity(city, state){
 function getCityByLocation(lat, long){
     const geoParseApi = `https://geocode.xyz/${lat},${long}?json=1`
     get(geoParseApi).then(response => {
-        console.log(response['city'], response['osmtags']['is-in-state']);
-        getBreweryByCity(response['city'], response['osmtags']['is-in-state']);
+        console.log(response['city'], response['stanename']);
+        getBreweryByCity(response['city'], response['statename']);
     })
 }
 
